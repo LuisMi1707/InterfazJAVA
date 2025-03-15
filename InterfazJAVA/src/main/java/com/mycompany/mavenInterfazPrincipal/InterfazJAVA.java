@@ -6,6 +6,10 @@ package com.mycompany.mavenInterfazPrincipal;
 import Interfaces.AnimalInterfaz;
 import Implementacion.Perro;
 import Implementacion.Gato;
+
+import Interfaces.VehiculoInterfaz;
+import Implementacion.Coche;
+import Implementacion.Bicicleta;
 /**
  *
  * @author HP
@@ -24,5 +28,19 @@ public class InterfazJAVA {
         System.out.println("Comportamiento de Gato");
         miGato.hacerSonido();
         miGato.mover();
+        
+        /* VehiculoInterfaz */
+        VehiculoInterfaz miCoche = new Coche();
+        System.out.println("-----------------------------------------------");
+        System.out.println("El coche:");
+        miCoche.arrancar();
+        miCoche.deteter();
+        
+        VehiculoInterfaz miBicicleta = new Bicicleta();
+        System.out.println("-----------------------------------------------");
+        System.out.println("La bicicleta:");
+        miBicicleta.arrancar();
+        miBicicleta.deteter();
+        
     }
 }
