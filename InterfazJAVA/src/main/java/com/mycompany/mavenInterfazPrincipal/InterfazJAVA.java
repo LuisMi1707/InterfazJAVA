@@ -10,6 +10,10 @@ import Implementacion.Gato;
 import Interfaces.VehiculoInterfaz;
 import Implementacion.Coche;
 import Implementacion.Bicicleta;
+
+import Interfaces.PagoInterfaz;
+import Implementacion.PagoConTarjeta;
+import Implementacion.PagoEnEfectivo;
 /**
  *
  * @author HP
@@ -42,5 +46,17 @@ public class InterfazJAVA {
         miBicicleta.arrancar();
         miBicicleta.deteter();
         
+        /* PagoInterfaz */
+        PagoInterfaz pagueConTarjeta = new PagoConTarjeta();
+        System.out.println("-----------------------------------------------");
+        System.out.println("Pagar Con Tarjeta:");
+        System.out.print("Si paga con tarjeta serán en dolares:");
+        pagueConTarjeta.procesarPago(15);
+        
+        PagoInterfaz pagueEnEfectivo = new PagoEnEfectivo();
+        System.out.println("-----------------------------------------------");
+        System.out.println("Pagar en efectivo:");
+        System.out.print("Si paga en efectivo serán en dolares:");
+        pagueEnEfectivo.procesarPago(19);
     }
 }
