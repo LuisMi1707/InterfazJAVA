@@ -14,6 +14,10 @@ import Implementacion.Bicicleta;
 import Interfaces.PagoInterfaz;
 import Implementacion.PagoConTarjeta;
 import Implementacion.PagoEnEfectivo;
+
+import Interfaces.FiguraGeometricaInterfaz;
+import Implementacion.ClassFiguraGeometrica.Circulo;
+import Implementacion.ClassFiguraGeometrica.Rectangulo;
 /**
  *
  * @author HP
@@ -21,42 +25,57 @@ import Implementacion.PagoEnEfectivo;
 public class InterfazJAVA {
 
     public static void main(String[] args) {
+        /* AnimalInterfaz */
         AnimalInterfaz miPerro = new Perro();
         System.out.println("-----------------------------------------------");
-        System.out.println("Comportamiento del perro");
+        System.out.println("\nComportamiento del perro");
         miPerro.hacerSonido();
         miPerro.mover();
         
         AnimalInterfaz miGato = new Gato();
         System.out.println("-----------------------------------------------");
-        System.out.println("Comportamiento de Gato");
+        System.out.println("\nComportamiento de Gato");
         miGato.hacerSonido();
         miGato.mover();
         
         /* VehiculoInterfaz */
         VehiculoInterfaz miCoche = new Coche();
         System.out.println("-----------------------------------------------");
-        System.out.println("El coche:");
+        System.out.println("\nEl coche:");
         miCoche.arrancar();
         miCoche.deteter();
         
         VehiculoInterfaz miBicicleta = new Bicicleta();
         System.out.println("-----------------------------------------------");
-        System.out.println("La bicicleta:");
+        System.out.println("\nLa bicicleta:");
         miBicicleta.arrancar();
         miBicicleta.deteter();
         
         /* PagoInterfaz */
         PagoInterfaz pagueConTarjeta = new PagoConTarjeta();
         System.out.println("-----------------------------------------------");
-        System.out.println("Pagar Con Tarjeta:");
+        System.out.println("\nPagar Con Tarjeta:");
         System.out.print("Si paga con tarjeta serán en dolares:");
         pagueConTarjeta.procesarPago(15);
         
         PagoInterfaz pagueEnEfectivo = new PagoEnEfectivo();
         System.out.println("-----------------------------------------------");
-        System.out.println("Pagar en efectivo:");
+        System.out.println("\nPagar en efectivo:");
         System.out.print("Si paga en efectivo serán en dolares:");
         pagueEnEfectivo.procesarPago(19);
+        
+        /*FiguraGeometricaInterfaz*/
+        System.out.println("-----------------------------------------------");
+        FiguraGeometricaInterfaz miCirculo = new Circulo(10.0);
+        System.out.println("\nCÍRCULO (radio = 10.0):");
+        System.out.println("Área: " + miCirculo.area());
+        System.out.println("Perímetro: " + miCirculo.perimetro());
+        
+        System.out.println("-----------------------------------------------");
+        FiguraGeometricaInterfaz miRectangulo = new Rectangulo(8.0, 4.0);
+        System.out.println("\nRECTÁNGULO (base = 8.0, altura = 4.0):");
+        System.out.println("Área: " + miRectangulo.area());
+        System.out.println("Perímetro: " + miRectangulo.perimetro());
+
     }
 }
