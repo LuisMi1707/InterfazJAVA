@@ -22,6 +22,8 @@ import Implementacion.ClassFiguraGeometrica.Rectangulo;
 import Interfaces.TrabajadorInterfaz;
 import Implementacion.ClassTrabajador.Desarrollador;
 import Implementacion.ClassTrabajador.Diseñador;
+
+import Implementacion.ClassOrdenable.ListaNumeros;
 /**
  * 
  *
@@ -92,6 +94,31 @@ public class InterfazJAVA {
         TrabajadorInterfaz diseñador = new Diseñador("UX/UI");
         System.out.println("\nACTIVIDAD DEL DISEÑADOR:");
         diseñador.trabajar();
+        
+        
+        System.out.println("-----------------------------------------------");
+        System.out.println("\nOrdenable");
+
+        ListaNumeros miLista = new ListaNumeros();
+        
+        // Agregar números desordenados
+        miLista.agregarNumero(5);
+        miLista.agregarNumero(2);
+        miLista.agregarNumero(8);
+        miLista.agregarNumero(1);
+        miLista.agregarNumero(9);
+        miLista.agregarNumero(3);
+        
+        // Mostrar la lista antes de ordenar
+        System.out.println("Antes de ordenar:");
+        miLista.mostrarNumeros();
+        
+        // Ordenar la lista utilizando el método de la interfaz
+        miLista.ordenar();
+        
+        // Mostrar la lista después de ordenar
+        System.out.println("\nDespués de ordenar:");
+        miLista.mostrarNumeros();
 
     }
 }
