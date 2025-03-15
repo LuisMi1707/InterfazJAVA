@@ -26,7 +26,5 @@ public class Rectangulo implements FiguraGeometricaInterfaz {
     public double perimetro() {
         return 2 * (base + altura);       
     }
-    
-    
-    
+        
 }

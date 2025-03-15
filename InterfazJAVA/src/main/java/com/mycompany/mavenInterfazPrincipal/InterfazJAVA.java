@@ -18,7 +18,12 @@ import Implementacion.PagoEnEfectivo;
 import Interfaces.FiguraGeometricaInterfaz;
 import Implementacion.ClassFiguraGeometrica.Circulo;
 import Implementacion.ClassFiguraGeometrica.Rectangulo;
+
+import Interfaces.TrabajadorInterfaz;
+import Implementacion.ClassTrabajador.Desarrollador;
+import Implementacion.ClassTrabajador.Diseñador;
 /**
+ * 
  *
  * @author HP
  */
@@ -76,6 +81,17 @@ public class InterfazJAVA {
         System.out.println("\nRECTÁNGULO (base = 8.0, altura = 4.0):");
         System.out.println("Área: " + miRectangulo.area());
         System.out.println("Perímetro: " + miRectangulo.perimetro());
+        
+        /*TrabajadorINterfaz*/
+        System.out.println("-----------------------------------------------");
+        TrabajadorInterfaz desarrollador = new Desarrollador("Java");
+        System.out.println("\nACTIVIDAD DEL DESARROLLADOR:");
+        desarrollador.trabajar();
+        
+        System.out.println("-----------------------------------------------");
+        TrabajadorInterfaz diseñador = new Diseñador("UX/UI");
+        System.out.println("\nACTIVIDAD DEL DISEÑADOR:");
+        diseñador.trabajar();
 
     }
 }
