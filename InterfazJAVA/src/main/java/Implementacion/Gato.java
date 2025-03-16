@@ -17,7 +17,7 @@ public class Gato implements AnimalInterfaz{
 
     @Override
     public void mover() {
-        System.out.println("Gato peresozo no se mueve");
+        System.out.println("Gato huevon no se mueve");
     }
     
     

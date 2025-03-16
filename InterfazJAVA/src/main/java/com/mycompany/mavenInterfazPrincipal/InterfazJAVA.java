@@ -1,6 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 
 package com.mycompany.mavenInterfazPrincipal;
 import Interfaces.AnimalInterfaz;
@@ -23,12 +20,14 @@ import Interfaces.TrabajadorInterfaz;
 import Implementacion.ClassTrabajador.Desarrollador;
 import Implementacion.ClassTrabajador.Diseñador;
 
+import Interfaces.OrdenableInterfaz;
 import Implementacion.ClassOrdenable.ListaNumeros;
-/**
- * 
- *
- * @author HP
- */
+
+import Interfaces.AlimentacionInterfaz;
+import Implementacion.ClassALimentacion.Persona;
+import Implementacion.ClassALimentacion.Animal;
+
+
 public class InterfazJAVA {
 
     public static void main(String[] args) {
@@ -119,6 +118,26 @@ public class InterfazJAVA {
         // Mostrar la lista después de ordenar
         System.out.println("\nDespués de ordenar:");
         miLista.mostrarNumeros();
-
+        
+        System.out.println("-----------------------------------------------");
+        AlimentacionInterfaz persona = new Persona("Carlos");
+        // Probar el método comer para la persona
+        System.out.println("\nCOMPORTAMIENTO ALIMENTICIO DE UNA PERSONA:");
+        persona.comer();
+        // Método específico de la clase Persona
+        // Para acceder a este método, necesitamos hacer un casting
+        ((Persona) persona).cocinar();
+        
+        AlimentacionInterfaz animal = new Animal("león");
+        // Probar el método comer para el animal
+        System.out.println("\nCOMPORTAMIENTO ALIMENTICIO DE UN ANIMAL:");
+        animal.comer();
+        
+        // Método específico de la clase Animal
+        // Para acceder a este método, necesitamos hacer un casting
+        ((Animal) animal).cazar();
     }
+    
 }
+    
+
