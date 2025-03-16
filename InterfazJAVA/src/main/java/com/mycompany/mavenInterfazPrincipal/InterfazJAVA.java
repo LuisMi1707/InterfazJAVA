@@ -31,6 +31,7 @@ import Interfaces.NotificableInterfaz;
 import Implementacion.ClassNotificable.CorreoElectronico;
 import Implementacion.ClassNotificable.SMS;
 
+import Implementacion.ClassComparableObjeto.Producto;
 
 public class InterfazJAVA {
 
@@ -156,6 +157,21 @@ public class InterfazJAVA {
         System.out.println("NOTIFICACIÓN POR SMS:");
         System.out.println(mensajeTexto.enviarNotificacion());
 
+        System.out.println("-----------------------------------------------\n");
+        Producto p1 = new Producto("Laptop", 1000);
+        Producto p2 = new Producto("Teléfono", 500);
+        
+        // Comparar productos
+        int resultado = p1.comparar(p2);
+        
+        // Mostrar resultado
+        if (resultado < 0) {
+            System.out.println(p1 + " es más barato que " + p2);
+        } else if (resultado > 0) {
+            System.out.println(p1 + " es más caro que " + p2);
+        } else {
+            System.out.println(p1 + " tiene el mismo precio que " + p2);
+        }
     }
 }
 
