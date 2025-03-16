@@ -1,16 +1,16 @@
 
 package com.mycompany.mavenInterfazPrincipal;
 import Interfaces.AnimalInterfaz;
-import Implementacion.Perro;
-import Implementacion.Gato;
+import Implementacion.ClassAnimal.Perro;
+import Implementacion.ClassAnimal.Gato;
 
 import Interfaces.VehiculoInterfaz;
-import Implementacion.Coche;
-import Implementacion.Bicicleta;
+import Implementacion.ClassVehiculo.Coche;
+import Implementacion.ClassVehiculo.Bicicleta;
 
 import Interfaces.PagoInterfaz;
-import Implementacion.PagoConTarjeta;
-import Implementacion.PagoEnEfectivo;
+import Implementacion.ClassPago.PagoConTarjeta;
+import Implementacion.ClassPago.PagoEnEfectivo;
 
 import Interfaces.FiguraGeometricaInterfaz;
 import Implementacion.ClassFiguraGeometrica.Circulo;
@@ -31,10 +31,12 @@ import Interfaces.NotificableInterfaz;
 import Implementacion.ClassNotificable.CorreoElectronico;
 import Implementacion.ClassNotificable.SMS;
 
+import Interfaces.ComparableObjetoInterfaz;
 import Implementacion.ClassComparableObjeto.Producto;
+
+import Interfaces.DescontableInterfaz;
 import Implementacion.ClassDescontable.DescuentoFijo;
 import Implementacion.ClassDescontable.DescuentoPorcentaje;
-import Interfaces.DescontableInterfaz;
 
 public class InterfazJAVA {
 

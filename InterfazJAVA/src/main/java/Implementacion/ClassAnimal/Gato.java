@@ -2,25 +2,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Implementacion;
-
+package Implementacion.ClassAnimal;
 import Interfaces.AnimalInterfaz;
 /**
  *
  * @author HP
  */
-public class Perro implements AnimalInterfaz {
+public class Gato implements AnimalInterfaz{
 
     @Override
     public void hacerSonido() {
-        System.out.println("El perro hace: Guau Guau");
+        System.out.println("Ay mi gatito miau miau");
     }
 
     @Override
     public void mover() {
-        System.out.println("EL perro esta corriendo");
+        System.out.println("Gato huevon no se mueve");
     }
     
+    
 }
-    
-    
