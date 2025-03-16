@@ -1,13 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package Implementacion.ClassALimentacion;
+
+package Implementacion.ClassAlimentacion;
 import Interfaces.AlimentacionInterfaz;
-/**
- *
- * @author HP
- */
+
 public class Persona implements AlimentacionInterfaz {
     private final String nombre;
 

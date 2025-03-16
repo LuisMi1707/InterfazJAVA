@@ -24,8 +24,12 @@ import Interfaces.OrdenableInterfaz;
 import Implementacion.ClassOrdenable.ListaNumeros;
 
 import Interfaces.AlimentacionInterfaz;
-import Implementacion.ClassALimentacion.Persona;
-import Implementacion.ClassALimentacion.Animal;
+import Implementacion.ClassAlimentacion.Persona;
+import Implementacion.ClassAlimentacion.Animal;
+
+import Interfaces.NotificableInterfaz;
+import Implementacion.ClassNotificable.CorreoElectronico;
+import Implementacion.ClassNotificable.SMS;
 
 
 public class InterfazJAVA {
@@ -136,8 +140,30 @@ public class InterfazJAVA {
         // Método específico de la clase Animal
         // Para acceder a este método, necesitamos hacer un casting
         ((Animal) animal).cazar();
+        
+        System.out.println("-----------------------------------------------\n");
+
+        CorreoElectronico correo = new CorreoElectronico();
+        SMS mensajeTexto = new SMS();
+        
+
+        // Enviar notificación por correo electrónico
+        System.out.println("NOTIFICACIÓN POR CORREO ELECTRÓNICO:");
+        System.out.println(correo.enviarNotificacion());
+        
+        System.out.println();
+        // Enviar notificación por SMS
+        System.out.println("NOTIFICACIÓN POR SMS:");
+        System.out.println(mensajeTexto.enviarNotificacion());
+
     }
-    
 }
+
+
+    
+    
+    
+    
+
     
 
