@@ -32,6 +32,9 @@ import Implementacion.ClassNotificable.CorreoElectronico;
 import Implementacion.ClassNotificable.SMS;
 
 import Implementacion.ClassComparableObjeto.Producto;
+import Implementacion.ClassDescontable.DescuentoFijo;
+import Implementacion.ClassDescontable.DescuentoPorcentaje;
+import Interfaces.DescontableInterfaz;
 
 public class InterfazJAVA {
 
@@ -172,6 +175,34 @@ public class InterfazJAVA {
         } else {
             System.out.println(p1 + " tiene el mismo precio que " + p2);
         }
+        
+        System.out.println("-----------------------------------------------\n");
+        // Crear instancias de descuentos
+        DescontableInterfaz descuentoPorcentaje = new DescuentoPorcentaje(20); // 20% de descuento
+        DescontableInterfaz descuentoFijo = new DescuentoFijo(50); // $50 de descuento
+        
+        // Producto con precio para probar
+        double precioProducto = 200;
+        
+        // Calcular descuentos
+        double descuento1 = descuentoPorcentaje.calcularDescuento(precioProducto);
+        double descuento2 = descuentoFijo.calcularDescuento(precioProducto);
+        
+        // Calcular precios finales
+        double precioFinal1 = precioProducto - descuento1;
+        double precioFinal2 = precioProducto - descuento2;
+        
+        // Mostrar resultados
+        System.out.println("Precio original: $" + precioProducto);
+        System.out.println("\nDescuento por porcentaje (20%):");
+        System.out.println("Cantidad descontada: $" + descuento1);
+        System.out.println("Precio final: $" + precioFinal1);
+        
+        System.out.println("\nDescuento fijo ($50):");
+        System.out.println("Cantidad descontada: $" + descuento2);
+        System.out.println("Precio final: $" + precioFinal2);
+
+        
     }
 }
 
